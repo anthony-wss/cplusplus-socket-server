@@ -104,7 +104,7 @@ class Server {
         }
 
         void handelGet(int fd, string s) {
-            string response = http.responseHtml("index.html");
+            string response = http.responseHtml("src/index.html");
             if (write(fd, response.c_str(), response.length()) != response.length()) {
                 perror("write error");
                 exit(1);
